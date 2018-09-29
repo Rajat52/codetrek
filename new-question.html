@@ -10,8 +10,7 @@
     
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-    
+<script type="text/javascript" src="js/main.js"></script>    
   </head>
   <body>
     
@@ -54,34 +53,35 @@
   <div class="container">
   <div class="card" style="width: 68rem;">
   <div class="card-body">
-    <h5 class="card-title">Title
-    <span style="color:red;font-size:15px">*</span></h5>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter a short and proper tittle for your question">
-    <br>
+    <form name="frm">
+      <div class="form-group">
+      <h5 class="card-title">Title
+      <span style="color:red;font-size:15px">*</span></h5>
+      <input type="text" class="form-control" name="answer" placeholder="Enter a short and proper tittle for your question">
+      <br>
     <div class="form-group">
       <label1 for="comment">Description</label1>
       <span style="color:red;font-size:15px">*</span>
-      <textarea class="form-control" rows="5" id="comment" placeholder="enter a detailed description"></textarea>
+      <textarea class="form-control" rows="5" name="description" placeholder="enter a detailed description"></textarea>
       <br>
     </div>
     <div class="form-group">
     <h5 class="card-title">Add tags</h5>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter a short and proper tittle for your question">
+    <input type="text" class="form-control" id="exampleInput" placeholder="Enter a short and proper tittle for your question">
      <div class="form-group">
             <small class="text-secondary">Tags will help others to find your question faster. Add comma separated tags. For ex: <span class="font-weight-light font-italic">codetrek, bootstrap, frontend</span></small>
 </div>
 
   <br>
-  <button type="button" class="btn btn-primary" onclick="myfunction()" >post your question</button>
-
+  <button type="button" class="btn btn-primary" onclick="myfunction()">post your question</button>
+  
+<script src="js/main.js"></script>
 </form>
   </div>
 </div>
-  </div><script type="text/javascript" src="js/main.js">
-  </script>
+  </div></form></div></div></div></span></a></div></div></nav>
+</body>
   <footer class="bg-light py-3 text-center mt-5">
     <span class="text-primary"><i class="fas fa-code"></i> Developed at CodeTrek Tehri 2018</span>
 </footer>
-
-</body>
 </html>
