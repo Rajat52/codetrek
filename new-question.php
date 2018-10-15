@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,7 +15,6 @@
 <script type="text/javascript" src="js/main.js"></script>    
   </head>
   <body>
-    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
   <a class="navbar-brand" href="#">CodeTRek Forum</a>
@@ -45,8 +46,7 @@
       </div>
     </nav> 
     <br>
-
-    <div class="container">
+      <div class="container">
   <button type="button" class="btn btn-outline-light text-dark">Ask question</button></div
   >
   <br>
@@ -73,7 +73,7 @@
 </div>
 
   <br>
-  <button type="button" class="btn btn-primary" onclick="myfunction()">post your question</button>
+  <button  href="thank_you.php" type="button" class="btn btn-primary" onclick="myfunction()">post your question</button>
   
 <script src="js/main.js"></script>
 </form>

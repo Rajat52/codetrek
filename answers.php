@@ -1,4 +1,7 @@
- <!DOCTYPE html>
+ <?php
+ echo"hi"
+ ?>
+  <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
@@ -12,6 +15,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/main_jq.js"></script>
 </head>
 <body>
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
@@ -109,6 +113,5 @@
   <footer class="bg-light py-3 text-center mt-5">
     <span class="text-primary"><i class="fas fa-code"></i> Developed at CodeTrek Tehri 2018</span>
   </footer>
-  <script src="js/main_jq.js" type="text/javascript"></script>
 </body>
 </html>
