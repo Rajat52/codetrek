@@ -1,5 +1,4 @@
 <?php
-echo"hello"
 ?>
  <!DOCTYPE html>
 <html>
@@ -28,7 +27,7 @@ echo"hello"
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">Questions</a>
+            <a href="index.php" class="nav-link">Questions</a>
           </li>
         </ul>
         <ul class="navbar-nav">
@@ -52,3 +51,4 @@ echo"hello"
   </nav>
   <div class="container mt-5">
     <div class="mb-5">
+    	echo"thank you"
