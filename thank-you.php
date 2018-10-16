@@ -1,3 +1,14 @@
+<?php 
+$title = $_POST['title'];
+$description = $_POST['description'];
+$tags = $_POST['tag'];
+$conn = new mysqli('localhost', 'root', '', 'quean');
+if ($conn->connect_error){
+	die("Connection failed: " . $conn->connect_error);
+}
+$sql = "INSERT INTO questions (title, description, links)
+VALUES ('$title', '$description', '$tags')";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +26,7 @@
 <body>
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
 		<div class="container">
-			<a class="navbar-brand" href="#">CodeTrek Forum</a>
+			<a class="navbar-brand" href="index.php">CodeTrek Forum</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 			 aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -23,7 +34,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a href="index.html" class="nav-link">Questions</a>
+						<a href="index.php" class="nav-link">Questions</a>
 					</li>
 				</ul>
 				<ul class="navbar-nav">
@@ -45,33 +56,22 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container mt-5">
-		<div class="d-flex justify-content-between mb-3 flex-column flex-md-row">
-			<h3 class="font-weight-light mb-0">Ask question</h3>
-		</div>
-		<div class="card mb-4 shadow-sm">
-			<div class="card-body">
-				<form action="new-question-submission.php" method="POST">
-					<div class="form-group">
-						<label for="question">Title<sup class="text-danger">*</sup></label>
-						<input type="text" class="form-control" id="question" name="title" placeholder="Enter a short and proper title for your question" required>
-					</div>
-					<div class="form-group">
-						<label for="description">Description<sup class="text-danger">*</sup></label>
-						<textarea name="description" id="description" name="description" rows="10" class="form-control" placeholder="Enter a detailed description of what problem you're facing and steps to replicate" required></textarea>
-					</div>
-					<div class="form-group">
-						<label for="tags">Add tags</label>
-						<input type="text" class="form-control" placeholder="tag1, tag2, tag3" name="tag">
-						<small class="text-secondary">Tags will help others to find your question faster. Add comma separated tags. For ex: <span class="font-weight-light font-italic">codetrek, bootstrap, frontend</span></small>
-					</div>
-					<button type="submit" class="btn btn-primary mt-3">Post your question</button>
-				</form>
-			</div>
+	<div class="container d-flex mt-3 justify-content-center">
+		<div class="w-50 alert text-center border-success" role="alert">
+			<h4 class="alert-heading text-center">
+<?php
+if ($conn->query($sql) === TRUE) {
+echo "Thank you for Posting a question";
+} else {
+echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
+?>
+			</h4>
+			<button class="btn btn-outline-success bg-light">
+				<a href="new-question.php" class="text-dark">Click For another question</a>
+			</button>
 		</div>
 	</div>
-	<footer class="bg-light py-3 text-center mt-5">
-		<span class="text-primary"><i class="fas fa-code"></i> Developed at CodeTrek Tehri 2018</span>
-	</footer>
 </body>
 </html>
